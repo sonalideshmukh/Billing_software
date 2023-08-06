@@ -1,7 +1,7 @@
 
 <div class="container mt-4">
         <h2 style="text-align:left;">Transaction Report</h2>
-        <form method="get" action="<?php echo site_url('stock_controller/view_stock_report'); ?>">
+        <form method="get" action="<?php echo site_url('Transaction_controller/view_transaction_report'); ?>">
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="from_date">From Date</label>
@@ -22,8 +22,8 @@
                     </select>
                 </div>
                 <div class="form-group col-md-3">
-                    <label for="product">Product</label>
-                    <select id="product" name="product" class="form-control">
+                    <label for="product">Type</label>
+                    <select id="type" name="type" class="form-control">
                         <option value="">All Type</option>
                         <?php foreach ($types as $key=>$types): ?>
                             <?php  $selected = $_GET['type'] == $key ? 'Selected':'';?>

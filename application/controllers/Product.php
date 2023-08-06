@@ -10,7 +10,9 @@ class Product extends CI_Controller {
         $this->load->model('Product_model');
     }
     public function index() {
-    	$this->load->view('product_create');
+        $data['product'] = $this->Product_model->get_product();
+    	$this->load->view('header');
+        $this->load->view('product/product_create',$data);
     }
     public function create_product() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
